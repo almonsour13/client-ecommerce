@@ -31,7 +31,9 @@ nav{
     font-size: 1.5rem;
     color: white;
     font-style: italic;
+    font-weight: bold;
     /* background-color: red; */
+    text-decoration: none;
 }
 .menu-links{
     display: flex;
@@ -51,6 +53,21 @@ nav{
     color: white;
     border-bottom: 2px white solid;
 }
+.menu-links.show{
+    left: 0;
+    
+    transition: 0.5s ease-in-out;
+}
+.menu-links.show a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
 .menu-list-btn{
     height: 40px;
     width: 40px;
@@ -67,6 +84,19 @@ nav{
     width: 100%;
     background-color: white;
 }
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+.menu-links.show .close-btn{
+    display: flex;
+}
 #banner{
     height: auto;
     /* background-image:  linear-gradient(rgba(255, 168, 109, 0.5),rgba(255, 168, 109, 0.5)),url(../img/bg.png); */
@@ -79,9 +109,8 @@ nav{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    gap: 40px;
 }
-.content{
+.banner-bg{
     height: 400px;
     width: 100%;
     background-color: red;
@@ -119,6 +148,7 @@ nav{
     border: none;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 .all-products-content{
     display: flex;
@@ -128,6 +158,9 @@ nav{
 .header{
     font-size: 2rem;
     color: rgb(255, 168, 109);
+}
+.header span{
+    color: rgb(233, 233, 233);
 }
 .products-content{
     display: grid;
@@ -148,7 +181,9 @@ nav{
 }
 .img-wrapper{
     height: 260px;
-    background-color: blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .products-wrapper:hover{
     border: 2px solid rgb(255, 168, 109);
@@ -165,7 +200,8 @@ nav{
     color: black;
 }
 .title-wrapper{
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -190,6 +226,7 @@ nav{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border-radius: 5px;
 }
 .cart-btn{
     width: 30px;
@@ -203,6 +240,33 @@ nav{
     background-color: rgb(255, 168, 109);
     font-size: 0.9rem;
 }
+.page-buttons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.page-buttons button{
+    background-color: rgb(255, 168, 109);
+    border: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.page-buttons button.disable{
+    background-color: rgb(233, 233, 233);
+}
+.page-buttons button svg{
+    height: 20px;
+    width: 20px;
+}
+.page-buttons button svg path{
+    fill: white;
+}
 .contact-content{
     margin-top: 200px;
     align-items: center;
@@ -211,7 +275,7 @@ nav{
 }
 .dev{
     text-align: center;
-    color: rgb(255, 168, 109);
+    color: rgb(233, 233, 233);
     font-size: 0.8rem;
 }
 .contact-label{
@@ -250,4 +314,40 @@ nav{
     height: 50px;
     color:rgb(255, 168, 109);
     font-size: 0.8rem;
+}
+.modal-container{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.144);
+    padding: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.modal-container.show{
+    display: flex;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+/* Opacity animation class */
+.modal-container.opacity-animation {
+    opacity: 1;
+}
+.modal-content{
+    min-width: 300px;
+    width: 350px;
+    height:150px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.modal-content p{
+    color: rgb(126, 126, 126);
 }

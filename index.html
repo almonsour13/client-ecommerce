@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/jquery/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <link rel="icon" href="assets/img/bg.png" type="image/x-icon">
     
 </head>
 <body>
     <nav>
         <div class="outer-container">
             <div class="container nav-content">
-                <div class="logo">
-                    Tios
+                <a href="#banner" class="logo">
+                    TIOS
+                </a>
+                <div class="menu-links" onclick="closeMenu()">
+                    <div class="close-btn">&#10006;</div>
+                    <a href="#banner" class="menu-btn">Home</a>
+                    <a href="#all-products" class="menu-btn">Products</a>
+                    <a href="#contact" class="menu-btn">Contacts</a>
                 </div>
-                <div class="menu-links">
-                    <a href="#" class="menu-btn">Home</a>
-                    <a href="#" class="menu-btn">Products</a>
-                    <a href="#" class="menu-btn">Cart</a>
-                    <a href="#" class="menu-btn">Contacts</a>
-                </div>
-                <div class="menu-list-btn">
+                <div class="menu-list-btn" onclick="showMenu()">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -31,9 +33,9 @@
         </div>
     </nav>
     <section id="banner">
-        <div class="outer-container">
+        <div class="outer-container banner-container">
             <div class="container banner-content">
-                <div class="content">
+                <div class="banner-bg">
                     <div class="inner-content">
                         <h1>Elevate Your Style, Step into Elegance - Unleashing Fashion at Your Feet!</h1>
                         <a href="#">Shop Now</a>
@@ -46,104 +48,19 @@
         <div class="outer-container">
             <div class="container all-products-content">
                 <div class="header">
-                    All products
+                    Products <span></span>
                 </div>
                 <div class="products-content">
-                    <a href="#" class="products-wrapper">
-                        <div class="img-wrapper">
-
-                        </div>
-                        <div class="product-description">
-                            <div class="title-wrapper">
-                                asdasdasdasdddddddddddddddddddddddddddddddddddddddd
-                            </div>
-                            <div class="price-wrapper">
-                                    Price: <span>170</span>
-                            </div>
-                            <div class="product-buttons">
-                                <button class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></button>
-                                <button class="buy-btn">Buy Now</button>
-                                <!-- <a href="#" class="buy-btn">Buy Now</a>
-                                <a href="#" class="cart-btn">Cart</a> -->
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="products-wrapper">
-                        <div class="img-wrapper">
-
-                        </div>
-                        <div class="product-description">
-                            <div class="title-wrapper">
-                                asdasdasd
-                            </div>
-                            <div class="price-wrapper">
-                                    Price: <span>170</span>
-                            </div>
-                            <div class="product-buttons">
-                                <button class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></button>
-                                <button class="buy-btn">Buy Now</button>
-                                <!-- <a href="#" class="buy-btn">Buy Now</a>
-                                <a href="#" class="cart-btn">Cart</a> -->
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="products-wrapper">
-                        <div class="img-wrapper">
-
-                        </div>
-                        <div class="product-description">
-                            <div class="title-wrapper">
-                                asdasdasd
-                            </div>
-                            <div class="price-wrapper">
-                                    Price: <span>170</span>
-                            </div>
-                            <div class="product-buttons">
-                                <button class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></button>
-                                <button class="buy-btn">Buy Now</button>
-                                <!-- <a href="#" class="buy-btn">Buy Now</a>
-                                <a href="#" class="cart-btn">Cart</a> -->
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="products-wrapper">
-                        <div class="img-wrapper">
-
-                        </div>
-                        <div class="product-description">
-                            <div class="title-wrapper">
-                                asdasdasd
-                            </div>
-                            <div class="price-wrapper">
-                                    Price: <span>170</span>
-                            </div>
-                            <div class="product-buttons">
-                                <button class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></button>
-                                <button class="buy-btn">Buy Now</button>
-                                <!-- <a href="#" class="buy-btn">Buy Now</a>
-                                <a href="#" class="cart-btn">Cart</a> -->
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="products-wrapper">
-                        <div class="img-wrapper">
-
-                        </div>
-                        <div class="product-description">
-                            <div class="title-wrapper">
-                                asdasdasd
-                            </div>
-                            <div class="price-wrapper">
-                                    Price: <span>170</span>
-                            </div>
-                            <div class="product-buttons">
-                                <button class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></button>
-                                <button class="buy-btn">Buy Now</button>
-                                <!-- <a href="#" class="buy-btn">Buy Now</a>
-                                <a href="#" class="cart-btn">Cart</a> -->
-                            </div>
-                        </div>
-                    </a>
+                    
+                </div>
+                <div class="page-buttons">
+                    <button class="prev-btn" onclick="prevPage(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                    </button>
+                    <p class="page-number">1</p>
+                    <button class="next-btn" onclick="nextPage(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -175,5 +92,10 @@
             </div>
         </div>
     </section>
+    <div class="modal-container">
+        <div class="modal-content">
+            <p>Products Added to Cart</p>
+        </div>
+    </div>
 </body>
 </html>
