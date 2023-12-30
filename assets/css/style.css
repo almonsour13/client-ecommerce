@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: white;
+}
+nav{
+    height: 60px;
+    background-color: rgb(255, 168, 109);
+}
+.outer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    height: 100%;
+    width: 1200px;
+    padding: 0 20px;
+    /* background-color: blue; */
+}
+.nav-content{
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 1.5rem;
+    color: white;
+    font-style: italic;
+    /* background-color: red; */
+}
+.menu-links{
+    display: flex;
+    gap: 10px;
+}
+.menu-links a.menu-btn{
+    height: 60px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:white;
+    border-bottom: 2px transparent solid;
+}
+.menu-links a:hover{
+    color: white;
+    border-bottom: 2px white solid;
+}
+.menu-list-btn{
+    height: 40px;
+    width: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    padding: 5px;
+    cursor: pointer;
+}
+.menu-list-btn .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+#banner{
+    height: auto;
+    /* background-image:  linear-gradient(rgba(255, 168, 109, 0.5),rgba(255, 168, 109, 0.5)),url(../img/bg.png); */
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: white; */
+}
+.banner-content{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 40px;
+}
+.content{
+    height: 400px;
+    width: 100%;
+    background-color: red;
+    background-image: url(../img/bg.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;
+}
+.inner-content{
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: left;
+    /* background-color: blue; */
+}
+.inner-content h1{
+    color: white;
+    font-size: 2rem;
+}
+.inner-content a{  
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: rgb(255, 168, 109);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.all-products-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+}
+.header{
+    font-size: 2rem;
+    color: rgb(255, 168, 109);
+}
+.products-content{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: space-between;
+    row-gap: 40px;
+}
+.products-wrapper{
+    /* width: 250px;
+    height: 400px; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    background-color: white;
+}
+.img-wrapper{
+    width: 230px;
+    height: 260px;
+    background-color: blue;
+}
+.products-wrapper:hover{
+    border: 2px solid rgb(255, 168, 109);
+}
+.product-description, .title-wrapper, .price-wrapper{
+    width: 230px;
+}
+.product-description{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+}
+.title-wrapper{
+    font-size: 1rem;
+}
+.price-wrapper{
+    font-size: 1rem;
+}
+.product-buttons{
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+.product-buttons button{
+    height: 30px;
+    text-decoration: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cart-btn{
+    width: 30px;
+    background-color: transparent;
+}
+.cart-btn svg path{
+    fill: rgb(255, 168, 109);
+}
+.buy-btn{
+    width: 100px;
+    background-color: rgb(255, 168, 109);
+    font-size: 0.9rem;
+}
